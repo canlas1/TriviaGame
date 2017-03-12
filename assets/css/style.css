@@ -1,0 +1,16 @@
+body{
+
+background-image: url("../images/backgroundTrivia.png");
+
+
+}
+
+/*.container-fluid{
+
+	background-image: url("../images/backgroundTriva.png");
+
+}*/
+
+.jumbotron{
+	background: yellow;
+}
