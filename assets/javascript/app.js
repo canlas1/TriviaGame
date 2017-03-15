@@ -1,6 +1,11 @@
 $(document).ready(function() {
     console.log("ready!");
 
+    var userScore = 0;
+
+
+    var body = document.getElementsByTagName("body");
+    console.log(body);
     // user presses start button 
     // screen switched to a trivia game and the user has a set amount of time
     // trivia game starts
@@ -94,16 +99,64 @@ $(document).ready(function() {
     console.log(quizTime);
     console.log("does this work")
 
-   function fSubmit(){
-      var correctAns = document.getElementbyID("#c1");  /// trying to do JQuery here  should i use get Element by ID
-      if (correctAns.checked === true){
-        console.log("the answer is correct")
-      }
-      else{
-        console.log("NOT RIGHT!!")
-      }
+    var myButton = document.getElementById("myButton");
+    console.log(myButton);
 
-   }
+    $("#myButton").on("click", function() {
+        parsChildren()
+        console.log(this)
+        console.log(this.type)
+        console.log(this.id)
+        console.log(correctAns.value);
+        
+
+
+
+    });
+
+    
+
+    var question1 = document.getElementById("question1");
+    console.log(question1);
+    console.log(question1.children[1].children);
+
+    if (correctAns.checked === question1.children[1].children) {
+            userScore++;
+        }
+
+    
+    var question2Arr = question2.children[1].children;
+    var question3Arr = question3.children[1].children;
+    var question4Arr = question4.children[1].children;
+    var question5Arr = question5.children[1].children;
+    var question6Arr = question6.children[1].children;
+    var question6Arr = question7.children[1].children;
+    
+
+    var parsChildren = function() {
+        for (var i = 0; i < question1Arr.length; i++) {
+            console.log(question1Arr[i]);
+            if (question1Arr[i].checked) {
+                console.log("i am checked");
+                console.log(question1Arr[i]);
+
+            }
+        }
+    }
+
+    parsChildren()
+
+
+
+    // if (correctAns.checked === true){
+    //   console.log("the answer is correct")
+
+    // }
+    // else{
+    //   console.log("NOT RIGHT!!")
+    // }
+
+
 
     // function start(){
     //  var score = 0;
