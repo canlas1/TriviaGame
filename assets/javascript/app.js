@@ -79,124 +79,167 @@ $(document).ready(function() {
     console.log(quizTime);
     console.log("does this work")
 
-    
 
 
 
-   
+
+
+
     var correctAns = 0;
     var incorrectAns = 0;
+    var answerArr = [];
 
-    // below are my answers givin in an array of each question
-    var question1Arr = question1.children[2];
-    var question2Arr = question2.children[1];
-    var question3Arr = question3.children[2];
-    var question4Arr = question4.children[0];
-    var question5Arr = question5.children[1];
-    var question6Arr = question6.children[2];
-    var question6Arr = question7.children[1];
- 
+    //below are my answers givin in an array of each question
+    function getAnswer() {
+        var question1Arr = $("input[type=radio][name=q1]:checked").val();
+        answerArr.push(question1Arr);
 
-    $("#correct").html("Correct Answers: " + correctAns);
-    
-    $("#wrong").html ("Wrong Answers: " + incorrectAns);
-  
+        var question2Arr = $("input[type=radio][name=q2]:checked").val();
+        answerArr.push(question2Arr);
+        var question3Arr = $("input[type=radio][name=q3]:checked").val();
+        answerArr.push(question3Arr);
+        var question4Arr = $("input[type=radio][name=q4]:checked").val();
+        answerArr.push(question4Arr);
+        var question5Arr = $("input[type=radio][name=q5]:checked").val();
+        answerArr.push(question5Arr);
+        var question6Arr = $("input[type=radio][name=q6]:checked").val();
+        answerArr.push(question6Arr);
+        var question7Arr = $("input[type=radio][name=q7]:checked").val();
+        answerArr.push(question7Arr);
+        // alert(question1Arr);}
+    }
+
+
+
+    function checkAnswer() {
+        getAnswer();
+        for (var i = 0; i < answerArr.length; i++) {
+
+            if (answerArr[i] === "1") {
+                correctAns++;
+            } else { incorrectAns++; }
+        }
+    }
+
+
+    // var question2Arr = question2.children[1];
+    // var question3Arr = question3.children[2];
+    // var question4Arr = question4.children[0];
+    // var question5Arr = question5.children[1];
+    // var question6Arr = question6.children[2];
+    // var question6Arr = question7.children[1];
+
+    $("form").submit(function(event) {
+        checkAnswer();
+        console.log(event, "event");
+        console.log(answerArr);
+        console.log(correctAns);
+        event.preventDefault();
+        // alert(correctAns);
+        getAnswer();
+
+
+        $("#correct").html("Correct Answers: " + correctAns);
+
+        $("#wrong").html("Wrong Answers: " + incorrectAns);
+    });
+
     // $("#myButton").on(click, onSubmit()){
     // var radioMatch = function() {
-    
-     // if (radio.checked === question1Arr){
-     //         correctAns++;
-     //     }
-     
 
-    
-    
+    // if (radio.checked === question1Arr){
+    //         correctAns++;
+    //     }
 
-    
-     
+
+
+
+
+
+
 }); // !!!!!!!!!!!!!!!!!!!!END OF!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! $(document).ready(function()
-    // var questions = {
-    //     question1: "Who holds the record for the most victories in a row on the professional golf tour?",
-    //     question2: "Which of the following items was owned by the fewest U.S. homes in 1990?",
-    //     question3: "Who is third behind Hank Aaron and Babe Ruth in major league career home runs?",
-    //     question4: "Which of these characters turned 40 years old in 1990?",
-    //     question5: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
-    //     question6: "In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?",
-    //     question7: "What did the 'D' in 'D-Day' stand for?"
-    //     }
+// var questions = {
+//     question1: "Who holds the record for the most victories in a row on the professional golf tour?",
+//     question2: "Which of the following items was owned by the fewest U.S. homes in 1990?",
+//     question3: "Who is third behind Hank Aaron and Babe Ruth in major league career home runs?",
+//     question4: "Which of these characters turned 40 years old in 1990?",
+//     question5: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
+//     question6: "In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?",
+//     question7: "What did the 'D' in 'D-Day' stand for?"
+//     }
 
 
-    //   var ansArr = {
-    //     answer1: "c",
-    //     answer2: "b",
-    //     answer3: "c",
-    //     answer4: "a",
-    //     answer5: "b",
-    //     answer6: "c",
-    //     answer7: "b"
-    //   }
-    
-
-    //         if (question1.answer1){
-    //             correctAns ++;
-    //             }
-    //             else{
-    //             console.log("incorrect anwser")
-    //             }
-    //     }
-     
-    
-
-   
-
-     // var question1 = document.getElementById("question1");
-     // var question2 = document.getElementById("question2");
-     // var question3 = document.getElementById("question3");
-     // var question4 = document.getElementById("question4");
-     // var question5 = document.getElementById("question5");
-     // var question6 = document.getElementById("question6");
-     // var question6 = document.getElementById("question7");
-     // console.log(question1);
-    
-   
-     // var question1Arr = question1.children[2];
-     // var question2Arr = question2.children[1];
-     // var question3Arr = question3.children[2];
-     // var question4Arr = question4.children[0];
-     // var question5Arr = question5.children[1];
-     // var question6Arr = question6.children[2];
-     // var question6Arr = question7.children[1];
-
-     // var radio = $( "input:checked" );
-    
-
-     // var radioMatch = function() {
-    
-     // if (radio.checked === question1Arr){
-     //         correctAns++;
-     //     }
-     
-
-     // var parsChildren = function() {
-     //  for (var i = 0; i < question1Arr.length; i++) {
-     //         console.log(question1Arr[i]);
-     //         if (question1Arr[i].checked) {
-     //             correctAns++;
-     //         else{
-     //             console.log("incorrect")
-     //         }
-     //             console.log("i am checked");
-
-     //             console.log(question1Arr[i]);
-
-     //         }
-     //     }
-     // }
-
-     // parsChildren()
+//   var ansArr = {
+//     answer1: "c",
+//     answer2: "b",
+//     answer3: "c",
+//     answer4: "a",
+//     answer5: "b",
+//     answer6: "c",
+//     answer7: "b"
+//   }
 
 
- 
+//         if (question1.answer1){
+//             correctAns ++;
+//             }
+//             else{
+//             console.log("incorrect anwser")
+//             }
+//     }
+
+
+
+
+
+// var question1 = document.getElementById("question1");
+// var question2 = document.getElementById("question2");
+// var question3 = document.getElementById("question3");
+// var question4 = document.getElementById("question4");
+// var question5 = document.getElementById("question5");
+// var question6 = document.getElementById("question6");
+// var question6 = document.getElementById("question7");
+// console.log(question1);
+
+
+// var question1Arr = question1.children[2];
+// var question2Arr = question2.children[1];
+// var question3Arr = question3.children[2];
+// var question4Arr = question4.children[0];
+// var question5Arr = question5.children[1];
+// var question6Arr = question6.children[2];
+// var question6Arr = question7.children[1];
+
+// var radio = $( "input:checked" );
+
+
+// var radioMatch = function() {
+
+// if (radio.checked === question1Arr){
+//         correctAns++;
+//     }
+
+
+// var parsChildren = function() {
+//  for (var i = 0; i < question1Arr.length; i++) {
+//         console.log(question1Arr[i]);
+//         if (question1Arr[i].checked) {
+//             correctAns++;
+//         else{
+//             console.log("incorrect")
+//         }
+//             console.log("i am checked");
+
+//             console.log(question1Arr[i]);
+
+//         }
+//     }
+// }
+
+// parsChildren()
+
+
+
 
 
 
@@ -225,173 +268,170 @@ $(document).ready(function() {
 
 
 
-    // console.log(this.type)
-    // console.log(this.id)
+// console.log(this.type)
+// console.log(this.id)
 
-    // function onSubmit(){ //when user hits submit once quiz is complete
-    //     var userScore = 0;
-    //     var correctAns = ["1"]
+// function onSubmit(){ //when user hits submit once quiz is complete
+//     var userScore = 0;
+//     var correctAns = ["1"]
 
-    // var q1 = document.forms["quiz"]["q1"].value;
-    // var q2 = document.forms["quiz"]["q2"].value;
-    // var q3 = document.forms["quiz"]["q3"].value;
-    // var q4 = document.forms["quiz"]["q4"].value;
-    // var q5 = document.forms["quiz"]["q5"].value;
-    // var q6 = document.forms["quiz"]["q6"].value;
-    // var q7 = document.forms["quiz"]["q7"].value;
+// var q1 = document.forms["quiz"]["q1"].value;
+// var q2 = document.forms["quiz"]["q2"].value;
+// var q3 = document.forms["quiz"]["q3"].value;
+// var q4 = document.forms["quiz"]["q4"].value;
+// var q5 = document.forms["quiz"]["q5"].value;
+// var q6 = document.forms["quiz"]["q6"].value;
+// var q7 = document.forms["quiz"]["q7"].value;
 
-    // console.log (q1);
-    // console.log (q2);
-    // console.log (q3);
-    // console.log (q4);
-    // console.log (q5);
+// console.log (q1);
+// console.log (q2);
+// console.log (q3);
+// console.log (q4);
+// console.log (q5);
 
-    // $("#score").html 
-    // if (correctAns.checked) === q1.answersArr[2]{
-    //     userScore++;
-    // }
-    // }
-    // var answerArr = [1]    
-    // var correctAns = ["1"];
-
-
-    // function onSubmit() {
-    //     var answerArr = [1];
-    //     var correctAns = ["1"];
-    //     var wrongAnswers = 0;
-    //     var userScore = 0;
-    //     var radios = getElementsByName()
-    //     $(".correct").html("Correct Answers: " + userScore);
-    //     $(".wrong").html("Wrong Answers: " + wrongAnswers);
-    //     for (var i = 0; i < correctAns.length; i++) {
+// $("#score").html 
+// if (correctAns.checked) === q1.answersArr[2]{
+//     userScore++;
+// }
+// }
+// var answerArr = [1]    
+// var correctAns = ["1"];
 
 
-    //         if (radio.value === correctAns && radio.checked) {
-    //             userScore++
-    //         } else if (radio.value === "wrong" && radio.checked) {
-    //             wrongAnswers++
+// function onSubmit() {
+//     var answerArr = [1];
+//     var correctAns = ["1"];
+//     var wrongAnswers = 0;
+//     var userScore = 0;
+//     var radios = getElementsByName()
+//     $(".correct").html("Correct Answers: " + userScore);
+//     $(".wrong").html("Wrong Answers: " + wrongAnswers);
+//     for (var i = 0; i < correctAns.length; i++) {
 
 
-    //         }
+//         if (radio.value === correctAns && radio.checked) {
+//             userScore++
+//         } else if (radio.value === "wrong" && radio.checked) {
+//             wrongAnswers++
 
 
-    //         $("#myButton").on("click") // my button on click jQuery
-    //         console.log("this is working BUTTON");
-    //         //     parsChildren()
-    //         console.log(this)
-
-    //     }
-    // }
-    // var getElementById = function() {
-    //     for (var i = 1; i < 11; i++) {
-    //         var radios = document.getElementsByName("q" + i);
-    //         for (var j = 0; j < radios.length; j++) {
-    //             var radio = radios[j];
-    //             if (radio.value == "correct" && radio.checked) {
-    //                 correctAnswers++
-    //             } else if (radio.value == "wrong" && radio.checked) {
-    //                 wrongAnswers++
-
-    //             }
-
-    //         }
-    //     }
-    // }
+//         }
 
 
-    // $('.correct').html("Correct Answers: " + correctAnswers);
-    // $('.wrong').html("Wrong Answers: " + wrongAnswers);
-    // $('.unanswered').html("Not Answered: " + unanswered);
+//         $("#myButton").on("click") // my button on click jQuery
+//         console.log("this is working BUTTON");
+//         //     parsChildren()
+//         console.log(this)
 
-    // onSubmit()
+//     }
+// }
+// var getElementById = function() {
+//     for (var i = 1; i < 11; i++) {
+//         var radios = document.getElementsByName("q" + i);
+//         for (var j = 0; j < radios.length; j++) {
+//             var radio = radios[j];
+//             if (radio.value == "correct" && radio.checked) {
+//                 correctAnswers++
+//             } else if (radio.value == "wrong" && radio.checked) {
+//                 wrongAnswers++
 
-    //   $(".answer").click(function){ //from the radio input
-    // answer += parseInt($(this).attr("value"));}
+//             }
 
-    // }
-    //     console.log(onSubmit());
-
-
-    // });
-
-
-
-    // var question1 = document.getElementById("question1");
-    // console.log(question1);
-    // console.log(question1.children[1].children);
-
-    // if (correctAns.checked === question1.children[1].children) {
-    //         userScore++;
-    //     }
+//         }
+//     }
+// }
 
 
-    // var question2Arr = question2.children[1].children;
-    // var question3Arr = question3.children[1].children;
-    // var question4Arr = question4.children[1].children;
-    // var question5Arr = question5.children[1].children;
-    // var question6Arr = question6.children[1].children;
-    // var question6Arr = question7.children[1].children;
+// $('.correct').html("Correct Answers: " + correctAnswers);
+// $('.wrong').html("Wrong Answers: " + wrongAnswers);
+// $('.unanswered').html("Not Answered: " + unanswered);
+
+// onSubmit()
+
+//   $(".answer").click(function){ //from the radio input
+// answer += parseInt($(this).attr("value"));}
+
+// }
+//     console.log(onSubmit());
 
 
-    // var parsChildren = function() {
-    //  for (var i = 0; i < question1Arr.length; i++) {
-    //         console.log(question1Arr[i]);
-    //         if (question1Arr[i].checked) {
-    //             console.log("i am checked");
-    //             console.log(question1Arr[i]);
-
-    //         }
-    //     }
-    // }
-
-    // parsChildren()
+// });
 
 
 
-    // if (correctAns.checked === true){
-    //   console.log("the answer is correct")
+// var question1 = document.getElementById("question1");
+// console.log(question1);
+// console.log(question1.children[1].children);
 
-    // }
-    // else{
-    //   console.log("NOT RIGHT!!")
-    // }
-    
-    
-
-    // function onSumbit(){
-    
-     
-
-    // var questions = {
-    //     question1: "Who holds the record for the most victories in a row on the professional golf tour?",
-    //     question2: "Which of the following items was owned by the fewest U.S. homes in 1990?",
-    //     question3: "Who is third behind Hank Aaron and Babe Ruth in major league career home runs?",
-    //     question4: "Which of these characters turned 40 years old in 1990?",
-    //     question5: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
-    //     question6: "In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?",
-    //     question7: "What did the 'D' in 'D-Day' stand for?"
-    //     }
+// if (correctAns.checked === question1.children[1].children) {
+//         userScore++;
+//     }
 
 
-    //   var ansArr = {
-    //     answer1: "c",
-    //     answer2: "b",
-    //     answer3: "c",
-    //     answer4: "a",
-    //     answer5: "b",
-    //     answer6: "c",
-    //     answer7: "b"
-    //   }
+// var question2Arr = question2.children[1].children;
+// var question3Arr = question3.children[1].children;
+// var question4Arr = question4.children[1].children;
+// var question5Arr = question5.children[1].children;
+// var question6Arr = question6.children[1].children;
+// var question6Arr = question7.children[1].children;
 
-    //     if (question1.answer1){
-    //         score ++;
-    //         }
-    //         else{
-    //         console.log("incorrect anwser")
-    //         }
-    // }
-     
-    //  console.log(onSubmit())
 
-   
+// var parsChildren = function() {
+//  for (var i = 0; i < question1Arr.length; i++) {
+//         console.log(question1Arr[i]);
+//         if (question1Arr[i].checked) {
+//             console.log("i am checked");
+//             console.log(question1Arr[i]);
 
+//         }
+//     }
+// }
+
+// parsChildren()
+
+
+
+// if (correctAns.checked === true){
+//   console.log("the answer is correct")
+
+// }
+// else{
+//   console.log("NOT RIGHT!!")
+// }
+
+
+
+// function onSumbit(){
+
+
+
+// var questions = {
+//     question1: "Who holds the record for the most victories in a row on the professional golf tour?",
+//     question2: "Which of the following items was owned by the fewest U.S. homes in 1990?",
+//     question3: "Who is third behind Hank Aaron and Babe Ruth in major league career home runs?",
+//     question4: "Which of these characters turned 40 years old in 1990?",
+//     question5: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
+//     question6: "In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?",
+//     question7: "What did the 'D' in 'D-Day' stand for?"
+//     }
+
+
+//   var ansArr = {
+//     answer1: "c",
+//     answer2: "b",
+//     answer3: "c",
+//     answer4: "a",
+//     answer5: "b",
+//     answer6: "c",
+//     answer7: "b"
+//   }
+
+//     if (question1.answer1){
+//         score ++;
+//         }
+//         else{
+//         console.log("incorrect anwser")
+//         }
+// }
+
+//  console.log(onSubmit())

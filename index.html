@@ -31,7 +31,8 @@
                 <div id="container" style="display: none">
                     <p class="lead">Time Remaining: </p>
                     <p id="display"></p>
-                    <form name="onSubmit" onsubmit="return onSubmit()">
+                    <form target="_formQuiz">
+
                         <div id="question1">
                             <h4>Who holds the record for the most victories in a row on the professional golf tour?</h4>
                             <label class="radio-inline">
@@ -141,9 +142,10 @@
                         </div>
                         <br>
                         <br>
-                        <button type="submit" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off" onclick="onSubmit()">
-                            Submit Button
-                        </button>
+                       <input type="submit" name="done" value="submit" id="form-submit">
+                            
+            
+                        </form>
                 </div>
             </div>
         </div>
