@@ -20,132 +20,137 @@
                 <h1 class="display-3">Totally Trivial Trivia!</h1>
                 <div id="buttons">
                     <button id="start">Start</button>
-                </div>
-            </div>
-            <div id="container" style="display: none">
-                <p class="lead">Time Remaining: </p>
-                <p id="display"></p>
-                <div id="question1">
-                    <h4>Who holds the record for the most victories in a row on the professional golf tour?</h4>
-                    <div class="checkbox">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="a1" value="0">A. Jack Nicklaus</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="b1" value="0">B. Arnold Palmer</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="c1" value="1">C. Byron Nelson</label>
-                        <!-- Answer is Byron Nelson -->
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="d1" value="0">D. Ben Hogan</label>
+                    <div id="correct">
+                        Correct Answer: 
+                    </div>
+                    <br>
+                    <div id="wrong">
+                        Wrong Answers:
                     </div>
                 </div>
-                <br>
-                <br>
-                <div id="question2">
-                    <h4>Which of the following items was owned by the fewest U.S. homes in 1990?</h4>
-                    <div class="checkbox">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="a2" value="0">A. home computer</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="b2" value="1">B. compact disk player</label>
-                        <!-- answer is compact disk player -->
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="c2" value="0">C. cordless phone</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="d2" value="0">D. dishwasher</label>
-                    </div>
+                <div id="container" style="display: none">
+                    <p class="lead">Time Remaining: </p>
+                    <p id="display"></p>
+                    <form name="onSubmit" onsubmit="return onSubmit()">
+                        <div id="question1">
+                            <h4>Who holds the record for the most victories in a row on the professional golf tour?</h4>
+                            <label class="radio-inline">
+                                <input type="radio" name="q1" class="answer" value="0">A. Jack Nicklaus</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="q1" class="answer" value="0">B. Arnold Palmer</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="q1" class="answer" value="1">C. Byron Nelson</label>
+                            <!-- Answer is Byron Nelson -->
+                            <label class="radio-inline">
+                                <input type="radio" name="q1" class="answer" value="0">D. Ben Hogan</label>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="question2">
+                            <h4>Which of the following items was owned by the fewest U.S. homes in 1990?</h4>
+                            <div class="checkbox">
+                                <label class="radio-inline">
+                                    <input type="radio" name="q2" class="answer" value="0">A. home computer</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q2" class="answer" value="1">B. compact disk player</label>
+                                <!-- answer is compact disk player -->
+                                <label class="radio-inline">
+                                    <input type="radio" name="q2" class="answer" value="0">C. cordless phone</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q2" class="answer" value="0">D. dishwasher</label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="question3">
+                            <h4>Who is third behind Hank Aaron and Babe Ruth in major league career home runs?</h4>
+                            <div class="checkbox">
+                                <label class="radio-inline">
+                                    <input type="radio" name="q3" class="answer" value="0">A. Reggie Jackson</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q3" class="answer" value="0">B. Harmon Killebrew
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q3" class="answer" value="1">C. Willie Mays</label>
+                                <!-- answer is Willie Mays -->
+                                <label class="radio-inline">
+                                    <input type="radio" name="q3" class="answer" value="0">D. Frank Robinson</label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="question4">
+                            <h4>Which of these characters turned 40 years old in 1990?</h4>
+                            <label class="radio-inline">
+                                <input type="radio" name="q4" class="answer" value="1">A. Charlie Brown</label>
+                            <!-- answer is Charlie Brown -->
+                            <label class="radio-inline">
+                                <input type="radio" name="q4" class="answer" value="0">B. Bugs Bunny</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="q4" class="answer" value="0">C. Mickey Mouse</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="q4" class="answer" value="0">D. Fred Flintstone</label>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="question5">
+                            <h4>In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?</h4>
+                            <div class="checkbox">
+                                <label class="radio-inline">
+                                    <input type="radio" name="q5" class="answer" value="0">A. 8</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q5" class="answer" value="1">B. 18</label>
+                                <!-- answer is 18 -->
+                                <label class="radio-inline">
+                                    <input type="radio" name="q5" class="answer" value="0">C. 38</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q5" class="answer" value="0">D. 58</label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="question6">
+                            <h4>In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?</h4>
+                            <div class="checkbox">
+                                <label class="radio-inline">
+                                    <input type="radio" name="q6" class="answer" value="0">A. 10 percent</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q6" class="answer" value="0">B. 15 percent</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q6" class="answer" value="1">C. 31 percent</label>
+                                <!-- answer is 31 percent -->
+                                <label class="radio-inline">
+                                    <input type="radio" name="q6" class="answer" value="0">D. 51 percent</label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="question7">
+                            <h4>What did the "D" in "D-Day" stand for?</h4>
+                            <div class="checkbox">
+                                <label class="radio-inline">
+                                    <input type="radio" name="q7" class="answer" value="0">A. doom</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q7" class="answer" value="1">B. day</label>
+                                <!-- day is the answer -->
+                                <label class="radio-inline">
+                                    <input type="radio" name="q7" class="answer" value="0">C. Dwight (Eisenhower)</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="q7" class="answer" value="0">D. Dunkirk</label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+                            Submit Button
+                        </button>
                 </div>
-                <br>
-                <br>
-                <div id="question3">
-                    <h4>Who is third behind Hank Aaron and Babe Ruth in major league career home runs?</h4>
-                    <div class="checkbox">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="a3" value="0">A. Reggie Jackson</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="b3" value="0">B. Harmon Killebrew
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="c3" value="1">C. Willie Mays</label>
-                        <!-- answer is Willie Mays -->
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="d3" value="0">D. Frank Robinson</label>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div id="question4">
-                    <h4>Which of these characters turned 40 years old in 1990?</h4>
-                    <label class="radio-inline">
-                        <input type="radio" name="optradio" id="a4" value="1">A. Charlie Brown</label>
-                    <!-- answer is Charlie Brown -->
-                    <label class="radio-inline">
-                        <input type="radio" name="optradio" id="b4" value="0">B. Bugs Bunny</label>
-                    <label class="radio-inline">
-                        <input type="radio" name="optradio" id="c4" value="0">C. Mickey Mouse</label>
-                    <label class="radio-inline">
-                        <input type="radio" name="optradio" id="d4" value="0">D. Fred Flintstone</label>
-                </div>
-                <br>
-                <br>
-                <div id="question5">
-                    <h4>In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?</h4>
-                    <div class="checkbox">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="a5" value="0">A. 8</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="b5" value="1">B. 18</label>
-                        <!-- answer is 18 -->
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="c5" value="0">C. 38</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="d5" value="0">D. 58</label>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div id="question6">
-                    <h4>In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?</h4>
-                    <div class="checkbox">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="a6" value="0">A. 10 percent</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="b6" value="0">B. 15 percent</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="c6" value="1">C. 31 percent</label>
-                        <!-- answer is 31 percent -->
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="d6" value="0">D. 51 percent</label>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div id="question7">
-                    <h4>What did the "D" in "D-Day" stand for?</h4>
-                    <div class="checkbox">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="a7" value="0">A. doom</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="b7" value="1">B. day</label>
-                        <!-- day is the answer -->
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="c7" value="0">C. Dwight (Eisenhower)</label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="d7" value="0">D. Dunkirk</label>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
-                    Submit Button
-                </button>
             </div>
         </div>
-    </div>
-    <!-- link javascript locally -->
-    <script src="assets/javascript/app.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- link javascript locally -->
+        <script src="assets/javascript/app.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
