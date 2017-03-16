@@ -1,8 +1,5 @@
 $(document).ready(function() {
     console.log("ready!");
-
-
-
     // var body = document.getElementsByTagName("body");
     // console.log(body);
     // user presses start button 
@@ -84,11 +81,6 @@ $(document).ready(function() {
 
     console.log("does this work")
 
-
-
-
-
-    
     // console.log(this.type)
     // console.log(this.id)
 
@@ -115,21 +107,22 @@ $(document).ready(function() {
     //     userScore++;
     // }
     // }
-// var answerArr = [1]    
-// var correctAns = ["1"];
-    
- 
-    function onSubmit() {
+    // var answerArr = [1]    
+    // var correctAns = ["1"];
 
-        var correctAns = 0;
+
+    function onSubmit() {
+        var answerArr = [1];
+        var correctAns = ["1"];
         var wrongAnswers = 0;
-        $(".correct").html("Correct Answers: " + correctAns);
+        var userScore = 0;
+        $(".correct").html("Correct Answers: " + userScore);
         $(".wrong").html("Wrong Answers: " + wrongAnswers);
         for (var i = 0; i < correctAns.length; i++) {
 
             var radios = $(".name")
-            if (radio.value === "[1]" && radio.checked) {
-                correctAns++
+            if (radio.value === correctAns && radio.checked) {
+                userScore++
             } else if (radio.value === "wrong" && radio.checked) {
                 wrongAnswers++
 
@@ -137,25 +130,18 @@ $(document).ready(function() {
             }
 
 
-     $("#myButton").on("click") // my button on click jQuery
-    console.log("this is working BUTTON");
-    //     parsChildren()
-    console.log(this)
+            $("#myButton").on("click") // my button on click jQuery
+            console.log("this is working BUTTON");
+            //     parsChildren()
+            console.log(this)
 
         }
     }
 
-        
+// onSubmit()
 
-       //   $(".answer").click(function){ //from the radio input
-       // answer += parseInt($(this).attr("value"));}
-       
-
-
-        
-
-        
-
+    //   $(".answer").click(function){ //from the radio input
+    // answer += parseInt($(this).attr("value"));}
 
     // }
     //     console.log(onSubmit());
@@ -237,15 +223,6 @@ $(document).ready(function() {
     //    console.log(this);
     //    var ansArr = function() {
 
-
-    //    }
-    //  } 
-    // };
-
-
-
-
-
     // var cat = {
     //       name: "Gus",
     //       color: "gray",
@@ -274,12 +251,6 @@ $(document).ready(function() {
 
     //     // calls the printInfo function. Which subsequently calls the nestedFunction()
     //     cat.printInfo();
-
-
-
-
-
-
 
     // end of var questions ojbect and method array
 
