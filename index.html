@@ -35,14 +35,14 @@
                         <div id="question1">
                             <h4>Who holds the record for the most victories in a row on the professional golf tour?</h4>
                             <label class="radio-inline">
-                                <input type="radio" name="q1" class="answer" value="0">A. Jack Nicklaus</label>
+                                <input type="radio" name="q1" class="answer" id="a1" value="0">A. Jack Nicklaus</label>
                             <label class="radio-inline">
-                                <input type="radio" name="q1" class="answer" value="0">B. Arnold Palmer</label>
+                                <input type="radio" name="q1" class="answer" id="a2" value="0">B. Arnold Palmer</label>
                             <label class="radio-inline">
-                                <input type="radio" name="q1" class="answer" value="1">C. Byron Nelson</label>
-                            <!-- Answer is Byron Nelson -->
+                                <input type="radio" name="q1" class="answer" id="a3" value="1">C. Byron Nelson</label>
+                            <!-- Answer iid="a1"s Byron Nelson -->
                             <label class="radio-inline">
-                                <input type="radio" name="q1" class="answer" value="0">D. Ben Hogan</label>
+                                <input type="radio" name="q1" class="answer" id="a4" value="0">D. Ben Hogan</label>
                         </div>
                         <br>
                         <br>
@@ -50,14 +50,14 @@
                             <h4>Which of the following items was owned by the fewest U.S. homes in 1990?</h4>
                             <div class="checkbox">
                                 <label class="radio-inline">
-                                    <input type="radio" name="q2" class="answer" value="0">A. home computer</label>
+                                    <input type="radio" name="q2" class="answer" id="b1" value="0">A. home computer</label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="q2" class="answer" value="1">B. compact disk player</label>
-                                <!-- answer is compact disk player -->
+                                    <input type="radio" name="q2" class="answer" id="b2" value="1">B. compact disk player</label>
+                                <!-- answer  id="b2"is compact disk player -->
                                 <label class="radio-inline">
-                                    <input type="radio" name="q2" class="answer" value="0">C. cordless phone</label>
+                                    <input type="radio" name="q2" class="answer" id="b3" value="0">C. cordless phone</label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="q2" class="answer" value="0">D. dishwasher</label>
+                                    <input type="radio" name="q2" class="answer" id="b4" value="0">D. dishwasher</label>
                             </div>
                         </div>
                         <br>
@@ -141,7 +141,7 @@
                         </div>
                         <br>
                         <br>
-                        <button type="submit" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+                        <button type="submit" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off" onclick="onSubmit()">
                             Submit Button
                         </button>
                 </div>

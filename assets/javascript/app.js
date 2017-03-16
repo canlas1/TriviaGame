@@ -17,7 +17,7 @@ $(document).ready(function() {
     // hit submit to get score
 
 
-    //  Variable that will hold our setInterval that runs the stopwatch
+    //  Variable that will hold our setInterval that runs the quizTime
     var intervalId;
 
     $("#start").click(function() { // when you click start do this code this is annonymus function
@@ -77,9 +77,153 @@ $(document).ready(function() {
         }
     }; //closes quizTime
     console.log(quizTime);
-
-
     console.log("does this work")
+
+    
+
+
+
+   
+    var correctAns = 0;
+    var incorrectAns = 0;
+
+    // below are my answers givin in an array of each question
+    var question1Arr = question1.children[2];
+    var question2Arr = question2.children[1];
+    var question3Arr = question3.children[2];
+    var question4Arr = question4.children[0];
+    var question5Arr = question5.children[1];
+    var question6Arr = question6.children[2];
+    var question6Arr = question7.children[1];
+ 
+
+    $("#correct").html("Correct Answers: " + correctAns);
+    
+    $("#wrong").html ("Wrong Answers: " + incorrectAns);
+  
+    // $("#myButton").on(click, onSubmit()){
+    // var radioMatch = function() {
+    
+     // if (radio.checked === question1Arr){
+     //         correctAns++;
+     //     }
+     
+
+    
+    
+
+    
+     
+}); // !!!!!!!!!!!!!!!!!!!!END OF!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! $(document).ready(function()
+    // var questions = {
+    //     question1: "Who holds the record for the most victories in a row on the professional golf tour?",
+    //     question2: "Which of the following items was owned by the fewest U.S. homes in 1990?",
+    //     question3: "Who is third behind Hank Aaron and Babe Ruth in major league career home runs?",
+    //     question4: "Which of these characters turned 40 years old in 1990?",
+    //     question5: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
+    //     question6: "In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?",
+    //     question7: "What did the 'D' in 'D-Day' stand for?"
+    //     }
+
+
+    //   var ansArr = {
+    //     answer1: "c",
+    //     answer2: "b",
+    //     answer3: "c",
+    //     answer4: "a",
+    //     answer5: "b",
+    //     answer6: "c",
+    //     answer7: "b"
+    //   }
+    
+
+    //         if (question1.answer1){
+    //             correctAns ++;
+    //             }
+    //             else{
+    //             console.log("incorrect anwser")
+    //             }
+    //     }
+     
+    
+
+   
+
+     // var question1 = document.getElementById("question1");
+     // var question2 = document.getElementById("question2");
+     // var question3 = document.getElementById("question3");
+     // var question4 = document.getElementById("question4");
+     // var question5 = document.getElementById("question5");
+     // var question6 = document.getElementById("question6");
+     // var question6 = document.getElementById("question7");
+     // console.log(question1);
+    
+   
+     // var question1Arr = question1.children[2];
+     // var question2Arr = question2.children[1];
+     // var question3Arr = question3.children[2];
+     // var question4Arr = question4.children[0];
+     // var question5Arr = question5.children[1];
+     // var question6Arr = question6.children[2];
+     // var question6Arr = question7.children[1];
+
+     // var radio = $( "input:checked" );
+    
+
+     // var radioMatch = function() {
+    
+     // if (radio.checked === question1Arr){
+     //         correctAns++;
+     //     }
+     
+
+     // var parsChildren = function() {
+     //  for (var i = 0; i < question1Arr.length; i++) {
+     //         console.log(question1Arr[i]);
+     //         if (question1Arr[i].checked) {
+     //             correctAns++;
+     //         else{
+     //             console.log("incorrect")
+     //         }
+     //             console.log("i am checked");
+
+     //             console.log(question1Arr[i]);
+
+     //         }
+     //     }
+     // }
+
+     // parsChildren()
+
+
+ 
+
+
+
+//     var correctAns1 = getElementById("a3")
+//     if (correctAns1 === true){
+//         score++
+//         console.log("score is adding!!!");
+//     }
+//     else{
+//         console.log("this is incorrectAns")
+//     }
+// }
+
+
+
+
+// function onSubmit() {
+//         var q1 = document.getElementsByName("q1");
+//         var answer;
+//         for (var i = 0; i < q1.length; i++) {
+//             if (q1[i].checked === true) { answer = q1[i].value;
+//                 break } }
+//         if (answer === "1") { console.log("correct") } else { console.log("incorrect") } };
+
+
+
+
 
     // console.log(this.type)
     // console.log(this.id)
@@ -111,34 +255,55 @@ $(document).ready(function() {
     // var correctAns = ["1"];
 
 
-    function onSubmit() {
-        var answerArr = [1];
-        var correctAns = ["1"];
-        var wrongAnswers = 0;
-        var userScore = 0;
-        $(".correct").html("Correct Answers: " + userScore);
-        $(".wrong").html("Wrong Answers: " + wrongAnswers);
-        for (var i = 0; i < correctAns.length; i++) {
-
-            var radios = $(".name")
-            if (radio.value === correctAns && radio.checked) {
-                userScore++
-            } else if (radio.value === "wrong" && radio.checked) {
-                wrongAnswers++
+    // function onSubmit() {
+    //     var answerArr = [1];
+    //     var correctAns = ["1"];
+    //     var wrongAnswers = 0;
+    //     var userScore = 0;
+    //     var radios = getElementsByName()
+    //     $(".correct").html("Correct Answers: " + userScore);
+    //     $(".wrong").html("Wrong Answers: " + wrongAnswers);
+    //     for (var i = 0; i < correctAns.length; i++) {
 
 
-            }
+    //         if (radio.value === correctAns && radio.checked) {
+    //             userScore++
+    //         } else if (radio.value === "wrong" && radio.checked) {
+    //             wrongAnswers++
 
 
-            $("#myButton").on("click") // my button on click jQuery
-            console.log("this is working BUTTON");
-            //     parsChildren()
-            console.log(this)
+    //         }
 
-        }
-    }
 
-// onSubmit()
+    //         $("#myButton").on("click") // my button on click jQuery
+    //         console.log("this is working BUTTON");
+    //         //     parsChildren()
+    //         console.log(this)
+
+    //     }
+    // }
+    // var getElementById = function() {
+    //     for (var i = 1; i < 11; i++) {
+    //         var radios = document.getElementsByName("q" + i);
+    //         for (var j = 0; j < radios.length; j++) {
+    //             var radio = radios[j];
+    //             if (radio.value == "correct" && radio.checked) {
+    //                 correctAnswers++
+    //             } else if (radio.value == "wrong" && radio.checked) {
+    //                 wrongAnswers++
+
+    //             }
+
+    //         }
+    //     }
+    // }
+
+
+    // $('.correct').html("Correct Answers: " + correctAnswers);
+    // $('.wrong').html("Wrong Answers: " + wrongAnswers);
+    // $('.unanswered').html("Not Answered: " + unanswered);
+
+    // onSubmit()
 
     //   $(".answer").click(function){ //from the radio input
     // answer += parseInt($(this).attr("value"));}
@@ -190,87 +355,43 @@ $(document).ready(function() {
     // else{
     //   console.log("NOT RIGHT!!")
     // }
+    
+    
+
+    // function onSumbit(){
+    
+     
+
+    // var questions = {
+    //     question1: "Who holds the record for the most victories in a row on the professional golf tour?",
+    //     question2: "Which of the following items was owned by the fewest U.S. homes in 1990?",
+    //     question3: "Who is third behind Hank Aaron and Babe Ruth in major league career home runs?",
+    //     question4: "Which of these characters turned 40 years old in 1990?",
+    //     question5: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
+    //     question6: "In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?",
+    //     question7: "What did the 'D' in 'D-Day' stand for?"
+    //     }
 
 
+    //   var ansArr = {
+    //     answer1: "c",
+    //     answer2: "b",
+    //     answer3: "c",
+    //     answer4: "a",
+    //     answer5: "b",
+    //     answer6: "c",
+    //     answer7: "b"
+    //   }
 
-    // function start(){
-    //  var score = 0;
-    //  var numQuestions = 7;
+    //     if (question1.answer1){
+    //         score ++;
+    //         }
+    //         else{
+    //         console.log("incorrect anwser")
+    //         }
+    // }
+     
+    //  console.log(onSubmit())
 
+   
 
-    //  var questions = {
-    //    question1: "Who holds the record for the most victories in a row on the professional golf tour?",
-    //    question2: "Which of the following items was owned by the fewest U.S. homes in 1990?",
-    //    question3: "Who is third behind Hank Aaron and Babe Ruth in major league career home runs?",
-    //    question4: "Which of these characters turned 40 years old in 1990?",
-    //    question5: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
-    //    question6: "In 1985, five percent of U.S. households had telephone answering machines. By 1990 what percentage of homes had answering machines?",
-    //    question7: "What did the 'D' in 'D-Day' stand for?"
-    //  }
-
-
-    //  var ansArr = {
-    //    question1: "c",
-    //    question2: "b",
-    //    question3: "c",
-    //    question4: "a",
-    //    question5: "b",
-    //    question6: "c",
-    //    question7: "b",
-    //  }
-
-    //  var answers = function(){
-    //    console.log(this);
-    //    var ansArr = function() {
-
-    // var cat = {
-    //       name: "Gus",
-    //       color: "gray",
-    //       age: 15,
-
-    //       printInfo: function() {
-
-    //         // What will this print? ("Object")
-    //         console.log(this);
-
-    //         // What will this print? ("Name: Gus Color: gray Age: 15")
-    //         console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
-
-    //         var nestedFunction = function() {
-
-    //           // What will this print? ("Window")
-    //           console.log(this);
-
-    //           // What will this print? ("Name:  Color: undefined Age: undefined")
-    //           console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
-    //         };
-
-    //         nestedFunction();
-    //       }
-    //     };
-
-    //     // calls the printInfo function. Which subsequently calls the nestedFunction()
-    //     cat.printInfo();
-
-    // end of var questions ojbect and method array
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}); // end of $(document).ready(function() {
